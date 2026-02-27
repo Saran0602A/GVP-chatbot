@@ -1,0 +1,60 @@
+{
+  "institutionName": "Gayatri Vidya Parishad College for Degree and PG Courses (Autonomous)",
+  "location": {
+    "city": "Visakhapatnam",
+    "state": "Andhra Pradesh",
+    "pincode": "530045",
+    "address": "Gayatri Vidya Parishad College for Degree and PG Courses(A), Rushikonda, Visakhapatnam-530045, Andhra Pradesh"
+  },
+  "affiliationAndAccreditation": {
+    "affiliatedTo": "Andhra University",
+    "naacGrade": "A",
+    "nbaAccreditedPrograms": ["MBA", "B.Tech CE", "B.Tech CSE", "B.Tech ECE", "B.Tech ME"],
+    "autonomousStatus": "Granted by UGC via Andhra University",
+    "autonomousSince": "2007",
+    "autonomousRenewal": "2014",
+    "cbcsFromBatch": "2015-16"
+  },
+  "overview": [
+    "Considered one of the premier institutions in Andhra Pradesh contributing to human resource development",
+    "Focuses on teaching-learning quality, research, consultancy, skill development, and community development"
+  ],
+  "programsOffered": [
+    "UG and PG programs in engineering, management, and computer applications",
+    "Flagship course: B.Tech"
+  ],
+  "admissions": {
+    "basis": "Entrance exams like AP EAMCET plus eligibility criteria"
+  },
+  "placements": {
+    "academicYear": "2023-24",
+    "placementRate": "75-85%",
+    "highestPackageLpa": 8.9,
+    "averagePackageLpa": 4.7,
+    "lowestPackageLpa": 3.5,
+    "recruiters": ["TCS", "Infosys", "Wipro", "Tech Mahindra", "Capgemini", "Cognizant"]
+  },
+  "facilitiesAndAcademics": {
+    "cbcsAvailable": true,
+    "scholarships": "Available for eligible students",
+    "minimumAttendance": {
+      "theory": "75%",
+      "practical": "90%"
+    }
+  },
+  "contact": {
+    "email": "principalgvpcdpgca@gmail.com",
+    "phone": "0891-2955084",
+    "workingHours": "Mon-Sat 10AM-5PM"
+  },
+  "organizationBackground": {
+    "gvpEstablished": "1988",
+    "includes": [
+      "Degree and PG college",
+      "3 engineering colleges (one for women)",
+      "Medical college",
+      "Research centres",
+      "Skill development initiatives"
+    ]
+  }
+}
