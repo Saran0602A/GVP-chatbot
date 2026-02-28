@@ -82,6 +82,7 @@ function ChatPage() {
       const decoder = new TextDecoder();
       let buffer = "";
       let done = false;
+      let streamFinished = false;
 
       while (!done) {
         const result = await reader.read();
@@ -94,9 +95,19 @@ function ChatPage() {
             (token) => {
               setMessages((prev) => appendAssistantToken(prev, token));
             },
-            (streamError) => setError(streamError),
-            () => {}
+            (streamError) => {
+              setError(streamError);
+              streamFinished = true;
+            },
+            () => {
+              streamFinished = true;
+            }
           );
+        }
+
+        if (streamFinished) {
+          await reader.cancel();
+          break;
         }
       }
     } catch (err) {

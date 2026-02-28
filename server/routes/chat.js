@@ -6,6 +6,9 @@ const router = express.Router();
 const writeSse = (res, type, payload) => {
   res.write(`event: ${type}\n`);
   res.write(`data: ${JSON.stringify(payload)}\n\n`);
+  if (typeof res.flush === "function") {
+    res.flush();
+  }
 };
 
 router.post("/", async (req, res) => {
@@ -18,6 +21,7 @@ router.post("/", async (req, res) => {
   res.setHeader("Content-Type", "text/event-stream");
   res.setHeader("Cache-Control", "no-cache, no-transform");
   res.setHeader("Connection", "keep-alive");
+  res.setHeader("X-Accel-Buffering", "no");
   res.flushHeaders();
 
   let clientDisconnected = false;
