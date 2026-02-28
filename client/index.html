@@ -1,12 +1,275 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GVP College AI Assistant</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GVP College AI Assistant // Nexus</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+        :root {
+            --primary: #0f4c81;
+            --secondary: #126e82;
+            --accent: #00f2ff;
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --user-bg: #0f4c81;
+            --bot-bg: #f0f4f9;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            /* Animated Background */
+            background: linear-gradient(-45deg, #e8f4ff, #f2f7fb, #e9eef7, #ffffff);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .page {
+            width: 100%;
+            max-width: 1100px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* The Main Chat Shell */
+        .chat-shell {
+            width: min(980px, 100%);
+            height: min(90vh, 820px);
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Hover interaction for the shell */
+        .chat-shell:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(15, 76, 129, 0.15);
+        }
+
+        .chat-header {
+            padding: 24px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #ffffff;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .chat-header h1 {
+            margin: 0;
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+        }
+
+        .chat-header p {
+            margin: 8px 0 0;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .chat-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Bubble Animations */
+        .bubble {
+            max-width: 75%;
+            padding: 14px 18px;
+            border-radius: 18px;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            animation: bubblePop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            position: relative;
+        }
+
+        @keyframes bubblePop {
+            from { opacity: 0; transform: translateY(20px) scale(0.8); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .user-row { justify-content: flex-end; display: flex; }
+        .assistant-row { justify-content: flex-start; display: flex; }
+
+        .user-bubble {
+            background: var(--primary);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .assistant-bubble {
+            background: var(--bot-bg);
+            color: #1a2b3c;
+            border-bottom-left-radius: 4px;
+            border: 1px solid #e1e8f0;
+        }
+
+        /* Hovering on bubbles */
+        .bubble:hover {
+            transform: scale(1.02);
+            filter: brightness(1.05);
+        }
+
+        /* Loading Dots Animation */
+        .typing-bubble {
+            display: flex;
+            gap: 6px;
+            padding: 12px 18px;
+            background: var(--bot-bg);
+            border-radius: 18px;
+            width: fit-content;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--secondary);
+            border-radius: 50%;
+            animation: dotBounce 1.4s infinite ease-in-out both;
+        }
+
+        .dot:nth-child(1) { animation-delay: -0.32s; }
+        .dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes dotBounce {
+            0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Input Area */
+        .chat-input-wrap {
+            padding: 20px;
+            background: #fff;
+            border-top: 1px solid #eef2f7;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .chat-input {
+            flex: 1;
+            border: 2px solid #eef2f7;
+            border-radius: 14px;
+            padding: 14px;
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .chat-input:focus {
+            border-color: var(--secondary);
+            background: #fafcfe;
+            box-shadow: 0 0 0 4px rgba(18, 110, 130, 0.1);
+        }
+
+        .send-btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            padding: 0 24px;
+            height: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .send-btn:hover {
+            background: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .send-btn:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 700px) {
+            .page { padding: 10px; }
+            .chat-shell { height: 95vh; border-radius: 16px; }
+            .bubble { max-width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <div class="chat-shell">
+            <header class="chat-header">
+                <h1>GVP Assistant</h1>
+                <p>Nexus Intelligence System // Online</p>
+            </header>
+
+            <main class="chat-body" id="chat-box">
+                <div class="assistant-row">
+                    <div class="bubble assistant-bubble">
+                        Hello! I am your GVP Assistant. How can I help you navigate the campus or check your schedule today?
+                    </div>
+                </div>
+
+                <div class="assistant-row">
+                    <div class="typing-bubble">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="chat-input-wrap">
+                <input type="text" class="chat-input" placeholder="Type your query here..." id="user-input">
+                <button class="send-btn" id="send-btn">SEND</button>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Simple interactive demo
+        const sendBtn = document.getElementById('send-btn');
+        const input = document.getElementById('user-input');
+        const chatBox = document.getElementById('chat-box');
+
+        sendBtn.addEventListener('click', () => {
+            if(input.value.trim() !== "") {
+                const userMsg = `
+                    <div class="user-row">
+                        <div class="bubble user-bubble">${input.value}</div>
+                    </div>`;
+                chatBox.innerHTML += userMsg;
+                input.value = "";
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        });
+    </script>
+</body>
 </html>
