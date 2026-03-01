@@ -13,17 +13,31 @@ function ChatInput({ onSend, disabled }) {
   };
 
   return (
-    <form className="chat-input-wrap" onSubmit={submit}>
+    /* Updated class from chat-input-wrap to chat-input-container */
+    <form className="chat-input-container" onSubmit={submit}>
       <input
         className="chat-input"
         type="text"
-        placeholder="Ask about admissions, placements, courses, or anything else..."
+        placeholder="Ask about admissions, placements, courses..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         disabled={disabled}
+        autoComplete="off"
       />
-      <button className="send-btn" type="submit" disabled={disabled || !message.trim()}>
-        {disabled ? "Sending..." : "Send"}
+      {/* Updated class from send-btn to send-button */}
+      <button 
+        className="send-button" 
+        type="submit" 
+        disabled={disabled || !message.trim()}
+      >
+        {disabled ? (
+          "Sending..."
+        ) : (
+          <>
+            <span>Send</span>
+            <span>✨</span>
+          </>
+        )}
       </button>
     </form>
   );
