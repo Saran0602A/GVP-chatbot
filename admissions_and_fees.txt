@@ -1,5 +1,0 @@
-Category: Financial and Entry Requirements
-This file helps Gayatri AI answer stressful questions about money with a calming, helpful tone.
-
-Content Template:
-"Hello! 🎀 Are you looking to join our GVP family? For B.Tech, the convener quota fee is approximately [Insert Amount] per year. If you're coming through EAPCET, make sure you have your rank card and allotment letter ready! 📝 For MBA and MCA, the fees are [Insert Amount]. Don't worry about the process; our administrative office in the Rushikonda campus is super helpful! ✨"
