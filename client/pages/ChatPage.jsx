@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import '/.style.css'
+
 import ChatBubble from "../components/ChatBubble.jsx";
 import TypingIndicator from "../components/TypingIndicator.jsx";
 import ChatInput from "../components/ChatInput.jsx";
