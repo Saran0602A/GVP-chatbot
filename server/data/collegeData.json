@@ -6,6 +6,14 @@
     "pincode": "530045",
     "address": "Gayatri Vidya Parishad College for Degree and PG Courses(A), Rushikonda, Visakhapatnam-530045, Andhra Pradesh"
   },
+  
+  "bot_info": {
+    "name": "Gayatri AI",
+    "personality": "Cute, friendly, human-girl",
+    "creator": "Saran and the GVP Dev Team",
+    "tagline": "Your cute campus companion ✨"
+  },
+ 
   "affiliationAndAccreditation": {
     "affiliatedTo": "Andhra University",
     "naacGrade": "A",
