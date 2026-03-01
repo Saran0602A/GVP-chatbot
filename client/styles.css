@@ -128,3 +128,71 @@ body, html {
   margin: 10px;
   border: 1px solid rgba(239, 68, 68, 0.2);
 }
+/* --- Chat Input Container (The Wrapper) --- */
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05); /* Semi-transparent glass */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 8px 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Glow effect when the user is typing */
+.chat-input-container:focus-within {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #6366f1; /* Professional Indigo */
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+  transform: translateY(-2px);
+}
+
+/* The actual text input */
+.chat-input {
+  flex: 1;
+  background: transparent !important;
+  border: none !important;
+  color: #f8fafc !important;
+  font-size: 1rem;
+  padding: 10px 5px;
+  outline: none !important;
+}
+
+.chat-input::placeholder {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* --- The Send Button --- */
+.send-button {
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.send-button:hover:not(:disabled) {
+  background: #4f46e5;
+  transform: scale(1.03);
+}
+
+.send-button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.send-button:disabled {
+  background: #1e293b;
+  color: #475569;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
