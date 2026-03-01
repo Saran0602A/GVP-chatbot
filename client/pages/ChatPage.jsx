@@ -151,9 +151,12 @@ function ChatPage() {
           <div ref={bottomRef} />
         </section>
 
-        <footer className="input-footer">
-          <ChatInput onSend={sendMessage} disabled={sending} />
-        </footer>
+      
+<footer className="input-footer">
+  <div className="input-centering-wrapper">
+    <ChatInput onSend={sendMessage} disabled={sending} />
+  </div>
+</footer>
       </section>
     </main>
   );
