@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import "./style.css"; 
 import ChatBubble from "../components/ChatBubble.jsx";
 import TypingIndicator from "../components/TypingIndicator.jsx";
 import ChatInput from "../components/ChatInput.jsx";
@@ -19,7 +20,6 @@ const appendAssistantToken = (list, token) => {
       return next;
     }
   }
-  next.push(createMessage("assistant", token));
   return next;
 };
 
@@ -49,9 +49,7 @@ function ChatPage() {
       let payload = {};
       try {
         payload = JSON.parse(dataLine.replace("data:", "").trim());
-      } catch (_err) {
-        return;
-      }
+      } catch (_err) { return; }
 
       if (event === "token") onToken(payload.token || "");
       if (event === "error") onError(payload.error || "Streaming failed");
@@ -62,9 +60,11 @@ function ChatPage() {
   };
 
   const sendMessage = async (text) => {
+    if (!text.trim()) return;
     setError("");
     setSending(true);
     setTyping(true);
+    
     setMessages((prev) => [...prev, createMessage("user", text), createMessage("assistant", "")]);
 
     try {
@@ -74,15 +74,12 @@ function ChatPage() {
         body: JSON.stringify({ message: text })
       });
 
-      if (!response.ok || !response.body) {
-        throw new Error("Unable to connect to chatbot service.");
-      }
+      if (!response.ok || !response.body) throw new Error("Unable to connect to Gayatri AI.");
 
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let buffer = "";
       let done = false;
-      let streamFinished = false;
 
       while (!done) {
         const result = await reader.read();
@@ -93,25 +90,16 @@ function ChatPage() {
             chunk,
             buffer,
             (token) => {
+              setTyping(false); 
               setMessages((prev) => appendAssistantToken(prev, token));
             },
-            (streamError) => {
-              setError(streamError);
-              streamFinished = true;
-            },
-            () => {
-              streamFinished = true;
-            }
+            (streamError) => setError(streamError),
+            () => { /* stream finished */ }
           );
-        }
-
-        if (streamFinished) {
-          await reader.cancel();
-          break;
         }
       }
     } catch (err) {
-      setError(err.message || "Failed to send message.");
+      setError(err.message || "Failed to communicate.");
     } finally {
       setTyping(false);
       setSending(false);
@@ -122,29 +110,50 @@ function ChatPage() {
     <main className="page">
       <section className="chat-shell">
         <header className="chat-header">
-          <h1>Gayatri AI Assistant</h1>
-          <p>Official AI Assistant of Gayatri Vidya Parishad College</p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+             <div className="status-indicator"></div>
+             <div>
+                <h1>Gayatri AI ✨</h1>
+                <p>Official Virtual Assistant of GVPCDPGC 🏛️</p>
+             </div>
+          </div>
         </header>
 
         <section className="chat-body">
           {messages.length === 0 ? (
-            <div className="empty-state">
-              <h2>Start a conversation</h2>
-              <p>Ask about admissions, placements, courses, attendance, contact details, or general topics.</p>
+            <div className="welcome-card">
+              <div className="logo-sparkle">🏛️</div>
+              <h2>Welcome to Gayatri AI</h2>
+              <p>How may I assist you today regarding campus details, admissions, or placements? 🎓</p>
+              
+              <div className="quick-actions">
+                <button onClick={() => sendMessage("Please provide details about the Admission process.")}>
+                  Admission Info 🏛️
+                </button>
+                <button onClick={() => sendMessage("Could you list the Engineering Department HODs?")}>
+                  HOD Directory 📋
+                </button>
+                <button onClick={() => sendMessage("Tell me about the recent placement statistics.")}>
+                  Placements 💼
+                </button>
+              </div>
             </div>
           ) : (
             messages.map((message) => (
-              <ChatBubble key={message.id} role={message.role} text={message.text || " "} />
+              <div key={message.id} className="message-container">
+                <ChatBubble role={message.role} text={message.text || " "} />
+              </div>
             ))
           )}
 
           {typing && <TypingIndicator />}
-
-          {error ? <div className="error-box">{error}</div> : null}
+          {error && <div className="error-box">{error}</div>}
           <div ref={bottomRef} />
         </section>
 
-        <ChatInput onSend={sendMessage} disabled={sending} />
+        <footer className="input-footer">
+          <ChatInput onSend={sendMessage} disabled={sending} />
+        </footer>
       </section>
     </main>
   );
