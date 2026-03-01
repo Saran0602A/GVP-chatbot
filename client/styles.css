@@ -14,7 +14,7 @@ body, html {
   background: radial-gradient(circle at top right, #1e293b, #0f172a);
   font-family: 'Inter', -apple-system, sans-serif;
   color: var(--text-main);
-  overflow: hidden; /* Prevents double scrollbars */
+  overflow: hidden;
 }
 
 /* --- Main Layout --- */
@@ -63,22 +63,23 @@ body, html {
   gap: 15px;
 }
 
-/* --- The Input Footer (CRITICAL FOR LAYOUT) --- */
+/* --- The Input Footer --- */
 .input-footer {
   padding: 20px 30px;
   background: rgba(15, 23, 42, 0.4);
   border-top: 1px solid var(--glass-border);
   display: flex;
-  justify-content: center; /* Centers the input bar */
+  justify-content: center; /* Centers the input bar horizontally */
+  align-items: center;
 }
 
 /* --- The Chat Input Container (The Bar) --- */
 .chat-input-container {
   display: flex !important;
   align-items: center;
-  width: 100%;
+  width: 100%; /* Ensures it stretches within max-width */
   max-width: 800px;
-  background: var(--glass-bg);
+  background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   padding: 6px 10px 6px 18px;
@@ -88,22 +89,26 @@ body, html {
 .chat-input-container:focus-within {
   border-color: var(--primary-indigo);
   box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-/* --- The Text Field --- */
+/* --- The Text Field (Visibility Fix) --- */
 .chat-input {
-  flex: 1 !important; /* Forces input to take all available space */
+  flex: 1 !important; /* Forces input to fill the bar */
+  min-width: 0; /* Prevents text from pushing the button out */
   background: transparent !important;
   border: none !important;
   outline: none !important;
-  color: white !important;
+  
+  /* FIXED COLOR */
+  color: #ffffff !important; 
+  -webkit-text-fill-color: #ffffff !important; /* Extra fix for some browsers */
   font-size: 1rem;
   padding: 10px 0;
 }
 
 .chat-input::placeholder {
-  color: #64748b;
+  color: #94a3b8; /* Visible slate-blue grey */
 }
 
 /* --- The Send Button --- */
@@ -117,6 +122,7 @@ body, html {
   cursor: pointer;
   transition: transform 0.2s, background 0.2s;
   white-space: nowrap;
+  margin-left: 8px;
 }
 
 .send-button:hover:not(:disabled) {
