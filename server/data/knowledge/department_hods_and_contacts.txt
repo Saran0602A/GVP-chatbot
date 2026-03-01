@@ -1,0 +1,14 @@
+Category: Academic Leadership
+Essential for routing students to the right office.
+
+Content Template:
+"Need to find a teacher? 👩‍🏫 Here is the list of our amazing HODs:
+
+CSE: [HOD Name] - They are experts in coding! 💻
+
+ECE: [HOD Name] - The masters of chips and circuits! ⚡
+
+Civil: Dr. P. Jyotsna Devi - Building our future! 🏗️
+
+Mechanical: [HOD Name] - Keeping things moving! ⚙️
+You can find them in the Engineering block from 10:00 AM to 5:00 PM. Go say hi! 🌸"
