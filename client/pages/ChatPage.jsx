@@ -122,7 +122,7 @@ function ChatPage() {
     <main className="page">
       <section className="chat-shell">
         <header className="chat-header">
-          <h1>GVP College AI Assistant</h1>
+          <h1>Gayatri AI Assistant</h1>
           <p>Official AI Assistant of Gayatri Vidya Parishad College</p>
         </header>
 
