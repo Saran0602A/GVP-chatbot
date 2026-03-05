@@ -1,77 +1,58 @@
 {
-  "institutionName": "Gayatri Vidya Parishad College for Degree and PG Courses (Autonomous)",
-  "location": {
-    "city": "Visakhapatnam",
-    "state": "Andhra Pradesh",
-    "pincode": "530045",
-    "address": "Gayatri Vidya Parishad College for Degree and PG Courses(A), Rushikonda, Visakhapatnam-530045, Andhra Pradesh"
-  },
-  
-  "bot_info": {
-    "name": "Gayatri AI",
-    "personality": "Cute, friendly, human-girl",
-    "creator": "Saran and the GVP Dev Team",
-    "tagline": "Your cute campus companion ✨"
-  },
- 
-  "affiliationAndAccreditation": {
-    "affiliatedTo": "Andhra University",
-    "naacGrade": "A",
-    "nbaAccreditedPrograms": ["MBA", "B.Tech CE", "B.Tech CSE", "B.Tech ECE", "B.Tech ME"],
-    "autonomousStatus": "Granted by UGC via Andhra University",
-    "autonomousSince": "2007",
-    "autonomousRenewal": "2014",
-    "cbcsFromBatch": "2015-16"
-  },
-  "overview": [
-    "Considered one of the premier institutions in Andhra Pradesh contributing to human resource development",
-    "Focuses on teaching-learning quality, research, consultancy, skill development, and community development"
-  ],
-  "programsOffered": [
-    "UG and PG programs in engineering, management, and computer applications",
-    "Flagship course: B.Tech"
-  ],
-  "admissions": {
-    "basis": "Entrance exams like AP EAMCET plus eligibility criteria"
-  },
-  "placements": {
-    "academicYear": "2023-24",
-    "placementRate": "75-85%",
-    "highestPackageLpa": 8.9,
-    "averagePackageLpa": 4.7,
-    "lowestPackageLpa": 3.5,
-    "recruiters": ["TCS", "Infosys", "Wipro", "Tech Mahindra", "Capgemini", "Cognizant"]
-  },
-  "facilitiesAndAcademics": {
-    "cbcsAvailable": true,
-    "scholarships": "Available for eligible students",
-    "minimumAttendance": {
-      "theory": "75%",
-      "practical": "90%"
+  "institution_details": {
+    "institutionName": "Gayatri Vidya Parishad College for Degree and PG Courses (Autonomous)",
+    "location": {
+      "city": "Visakhapatnam",
+      "state": "Andhra Pradesh",
+      "pincode": "530045",
+      "address": "Gayatri Vidya Parishad College for Degree and PG Courses(A), Rushikonda, Visakhapatnam-530045, Andhra Pradesh"
+    },
+    "bot_info": {
+      "name": "Gayatri AI",
+      "personality": "Cute, friendly, human-girl",
+      "creator": "Saran and the GVP Dev Team",
+      "tagline": "Your cute campus companion ✨"
+    },
+    "affiliationAndAccreditation": {
+      "affiliatedTo": "Andhra University",
+      "naacGrade": "A",
+      "nbaAccreditedPrograms": ["MBA", "B.Tech CE", "B.Tech CSE", "B.Tech ECE", "B.Tech ME"],
+      "autonomousStatus": "Granted by UGC via Andhra University",
+      "autonomousSince": "2007",
+      "autonomousRenewal": "2014",
+      "cbcsFromBatch": "2015-16"
     }
   },
-  "contact": {
-    "email": "principalgvpcdpgca@gmail.com",
-    "phone": "0891-2955084",
-    "workingHours": "Mon-Sat 10AM-5PM"
+  "college_overview": {
+    "overview": [
+      "Considered one of the premier institutions in Andhra Pradesh contributing to human resource development",
+      "Focuses on teaching-learning quality, research, consultancy, skill development, and community development"
+    ],
+    "programsOffered": [
+      "UG and PG programs in engineering, management, and computer applications",
+      "Flagship course: B.Tech"
+    ],
+    "admissions": {
+      "basis": "Entrance exams like AP EAMCET plus eligibility criteria"
+    },
+    "placements": {
+      "academicYear": "2023-24",
+      "placementRate": "75-85%",
+      "highestPackageLpa": 8.9,
+      "averagePackageLpa": 4.7,
+      "lowestPackageLpa": 3.5,
+      "recruiters": ["TCS", "Infosys", "Wipro", "Tech Mahindra", "Capgemini", "Cognizant"]
+    },
+    "facilitiesAndAcademics": {
+      "cbcsAvailable": true,
+      "scholarships": "Available for eligible students",
+      "minimumAttendance": {
+        "theory": "75%",
+        "practical": "90%"
+      }
+    }
   },
-  "organizationBackground": {
-    "gvpEstablished": "1988",
-    "includes": [
-      "Degree and PG college",
-      "3 engineering colleges (one for women)",
-      "Medical college",
-      "Research centres",
-      "Skill development initiatives"
-    ]
-  }
-}
-{
-  "college_info": {
-    "name": "Gayatri Vidya Parishad College for Degree and PG Courses",
-    "last_updated": "2026-03-05"
-  },
-  "leadership": {
+  "leadership_and_staff": {
     "principal": {
       "name": "Prof. K. S. Bose",
       "email": "principal@gvpcdpgc.edu.in"
@@ -90,171 +71,45 @@
       { "name": "Dr. P.V. Mohini", "role": "Student Affairs" },
       { "name": "Prof. D. Saritha", "role": "Career Guidance, Training & Placement" }
     ],
-    "controller_of_examinations": {
-      "name": "Dr. A. Sairoop"
-    }
-  },
-  "departments": {
-    "pg_hods": [
-      { "dept": "MBA", "head": "Dr. M.S.R. Seshagiri" },
-      { "dept": "MBA (Business Analytics)", "head": "Dr. K.V.V. Murali Someswara Rao" },
-      { "dept": "MSc Organic Chemistry", "head": "Dr. Karteek Rao Amperayani" },
-      { "dept": "MHRM", "head": "Dr. A.V. Joga Rao" }
-    ],
-    "engineering_technology": {
-      "hods": [
-        { "dept": "Basic Sciences & Humanities", "head": "Dr. S. Rajesh" },
-        { "dept": "Civil Engineering", "head": "Dr. P. Jyotsna Devi" },
-        { "dept": "Computer Science and Engineering", "head": "Dr. G.R.S Murthy" }
+    "departments": {
+      "pg_hods": [
+        { "dept": "MBA", "head": "Dr. M.S.R. Seshagiri" },
+        { "dept": "MBA (Business Analytics)", "head": "Dr. K.V.V. Murali Someswara Rao" },
+        { "dept": "MSc Organic Chemistry", "head": "Dr. Karteek Rao Amperayani" },
+        { "dept": "MHRM", "head": "Dr. A.V. Joga Rao" }
       ],
-      "computer_science_data_science": {
-        "faculty": [
-          {
-            "name": "Prof. D. Saritha",
-            "designation": "Professor",
-            "qualification": "B.E, M.Tech",
-            "specialization": "Databases & Data Mining",
-            "email": "sarithad@gvpcdpgc.edu.in",
-            "unique_id": "1-4717491930",
-            "doj": "01-07-1995"
-          },
-          {
-            "name": "Dr. G.R.S Murthy",
-            "designation": "Professor & H.O.D (CSE)",
-            "qualification": "M.Tech, Ph.D",
-            "specialization": "Computer Vision",
-            "email": "murthy.grs@gvpcdpgc.edu.in",
-            "unique_id": "1-4144533476",
-            "doj": "27-04-2021"
-          },
-          {
-            "name": "Dr. Bh. Padma",
-            "designation": "Professor",
-            "qualification": "M.Tech, Ph.D",
-            "specialization": "Cryptography and Network Security",
-            "email": "padmabh@gvpcdpgc.edu.in",
-            "unique_id": "1-4719382452",
-            "doj": "22-08-2005"
-          },
-          {
-            "name": "Dr. D Chandravathi",
-            "designation": "Associate Professor",
-            "qualification": "M.Tech, Ph.D",
-            "specialization": "Cloud Security",
-            "email": "chandravathid@gvpcdpgc.edu.in",
-            "unique_id": "1-471938249",
-            "doj": "30-09-2022"
-          },
-          {
-            "name": "Sri. G. Kalyan Chakravarthi",
-            "designation": "Assistant Professor",
-            "qualification": "B. Tech, M. Tech",
-            "specialization": "Computer Science & Technology",
-            "email": "gkalyan@gvpcdpgc.edu.in",
-            "unique_id": "1-3293258677",
-            "doj": "25-11-2016"
-          },
-          {
-            "name": "Sri R. Kanaka Raju",
-            "designation": "Assistant Professor",
-            "qualification": "M.Tech",
-            "specialization": "BIG DATA",
-            "email": "rkanakaraju@gvpcdpgc.edu.in",
-            "unique_id": "1-43432129663",
-            "doj": "15-12-2022"
-          },
-          {
-            "name": "Smt L. Pratibha",
-            "designation": "Assistant Professor",
-            "qualification": "M.C.A., M.Tech.",
-            "specialization": "MACHINE LEARNING",
-            "email": "pratibha@gvpcdpgc.edu.in",
-            "unique_id": "1-43431573757",
-            "doj": "15-04-2023"
-          },
-          {
-            "name": "Mr. M. Anil",
-            "designation": "Assistant Professor",
-            "qualification": "B. Tech, M. Tech",
-            "specialization": "Computer Science and Engineering",
-            "email": "anilmeka@gvpcdpgc.edu.in",
-            "unique_id": "1-5035263842",
-            "doj": "05-01-2022"
-          },
-          {
-            "name": "Mr. S. Arun Kumar",
-            "designation": "Assistant Professor",
-            "qualification": "B. Tech, M. Tech",
-            "specialization": "Computer Science and Technology",
-            "email": "arunkumar@gvpcdpgc.edu.in",
-            "unique_id": "1-43428601613",
-            "doj": "15-12-2022"
-          },
-          {
-            "name": "Sri T. Sri Krishna",
-            "designation": "Assistant Professor",
-            "qualification": "M. Tech",
-            "specialization": "AI & EMBEDDED SYSTEMS",
-            "email": "srikrishna@gvpcdpgc.edu.in",
-            "unique_id": "1-7615302452",
-            "doj": "04-09-2024"
-          },
-          {
-            "name": "Ms. C Aparna",
-            "designation": "Assistant Professor",
-            "qualification": "B. Tech, M. Tech",
-            "specialization": "Computer Science and Technology",
-            "email": "aparna@gvpcdpgc.edu.in",
-            "unique_id": "1-44730672722",
-            "doj": "03-09-2024"
-          },
-          {
-            "name": "Mrs. B Gnaneshwari Devi",
-            "designation": "Assistant Professor",
-            "qualification": "B. Tech, M. Tech",
-            "specialization": "Software Engineering",
-            "email": "gnanee@gvpcdpgc.edu.in",
-            "doj": "04-08-2025"
-          },
-          {
-            "name": "Ms. Vaishna C Bhanu",
-            "designation": "Assistant Professor",
-            "qualification": "B. Tech, M. Tech",
-            "specialization": "Computer Science and Technology",
-            "email": "vaishnacbhanu@gvpcdpgc.edu.in",
-            "doj": "04-08-2025"
-          },
-          {
-            "name": "Mrs. M V G Sirisha",
-            "designation": "Assistant Professor",
-            "qualification": "B. Tech, M. Tech",
-            "specialization": "Computer Science and Technology",
-            "email": "sirisha2025@gvpcdpgc.edu.in",
-            "doj": "04-08-2025"
-          },
-          {
-            "name": "Mr. Bharat Kumar Jagana",
-            "designation": "Assistant Professor",
-            "qualification": "B. Tech, M. Tech",
-            "specialization": "Computer Science and Technology",
-            "email": "aparna@gvpcdpgc.edu.in",
-            "doj": "19-08-2025"
-          },
-          {
-            "name": "Mrs. N Sai Susmitha Naidu",
-            "designation": "Assistant Professor",
-            "qualification": "B. Tech, M. Tech",
-            "specialization": "Machine Learning",
-            "email": "sushmita.n@gvpcdpgc.edu.in",
-            "doj": "25-08-2025"
-          }
+      "engineering_technology": {
+        "hods": [
+          { "dept": "Basic Sciences & Humanities", "head": "Dr. S. Rajesh" },
+          { "dept": "Civil Engineering", "head": "Dr. P. Jyotsna Devi" },
+          { "dept": "Computer Science and Engineering", "head": "Dr. G.R.S Murthy" }
         ],
-        "technical_staff": [
-          { "name": "Mr. N Sairam Saran", "role": "Programmer" },
-          { "name": "Mr. D. V. Murali Krishna", "role": "Network Administrator" },
-          { "name": "Mr. A. S. S. V. Akhil", "role": "Lab Technician" },
-          { "name": "Mr. G. Siva Sankar", "role": "Lab Technician" }
-        ]
+        "computer_science_data_science": {
+          "faculty": [
+            { "name": "Prof. D. Saritha", "designation": "Professor", "specialization": "Databases & Data Mining", "email": "sarithad@gvpcdpgc.edu.in" },
+            { "name": "Dr. G.R.S Murthy", "designation": "Professor & H.O.D (CSE)", "specialization": "Computer Vision", "email": "murthy.grs@gvpcdpgc.edu.in" },
+            { "name": "Dr. Bh. Padma", "designation": "Professor", "specialization": "Cryptography and Network Security", "email": "padmabh@gvpcdpgc.edu.in" },
+            { "name": "Dr. D Chandravathi", "designation": "Associate Professor", "specialization": "Cloud Security", "email": "chandravathid@gvpcdpgc.edu.in" },
+            { "name": "Sri. G. Kalyan Chakravarthi", "designation": "Assistant Professor", "specialization": "Computer Science & Technology", "email": "gkalyan@gvpcdpgc.edu.in" },
+            { "name": "Sri R. Kanaka Raju", "designation": "Assistant Professor", "specialization": "BIG DATA", "email": "rkanakaraju@gvpcdpgc.edu.in" },
+            { "name": "Smt L. Pratibha", "designation": "Assistant Professor", "specialization": "MACHINE LEARNING", "email": "pratibha@gvpcdpgc.edu.in" },
+            { "name": "Mr. M. Anil", "designation": "Assistant Professor", "specialization": "Computer Science and Engineering", "email": "anilmeka@gvpcdpgc.edu.in" },
+            { "name": "Mr. S. Arun Kumar", "designation": "Assistant Professor", "specialization": "Computer Science and Technology", "email": "arunkumar@gvpcdpgc.edu.in" },
+            { "name": "Sri T. Sri Krishna", "designation": "Assistant Professor", "specialization": "AI & EMBEDDED SYSTEMS", "email": "srikrishna@gvpcdpgc.edu.in" },
+            { "name": "Ms. C Aparna", "designation": "Assistant Professor", "specialization": "Computer Science and Technology", "email": "aparna@gvpcdpgc.edu.in" },
+            { "name": "Mrs. B Gnaneshwari Devi", "designation": "Assistant Professor", "specialization": "Software Engineering", "email": "gnanee@gvpcdpgc.edu.in" },
+            { "name": "Ms. Vaishna C Bhanu", "designation": "Assistant Professor", "specialization": "Computer Science and Technology", "email": "vaishnacbhanu@gvpcdpgc.edu.in" },
+            { "name": "Mrs. M V G Sirisha", "designation": "Assistant Professor", "specialization": "Computer Science and Technology", "email": "sirisha2025@gvpcdpgc.edu.in" },
+            { "name": "Mr. Bharat Kumar Jagana", "designation": "Assistant Professor", "specialization": "Computer Science and Technology", "email": "aparna@gvpcdpgc.edu.in" },
+            { "name": "Mrs. N Sai Susmitha Naidu", "designation": "Assistant Professor", "specialization": "Machine Learning", "email": "sushmita.n@gvpcdpgc.edu.in" }
+          ],
+          "technical_staff": [
+            { "name": "Mr. N Sairam Saran", "role": "Programmer" },
+            { "name": "Mr. D. V. Murali Krishna", "role": "Network Administrator" },
+            { "name": "Mr. A. S. S. V. Akhil", "role": "Lab Technician" },
+            { "name": "Mr. G. Siva Sankar", "role": "Lab Technician" }
+          ]
+        }
       }
     }
   }
