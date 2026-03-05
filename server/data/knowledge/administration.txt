@@ -45,3 +45,164 @@ Engineering & Technology HODs
 Basic Sciences & Humanities - Dr. S. Rajesh
 
 Civil Engineering - Dr. P. Jyotsna Devi
+
+Computer science and engineering - Dr. G.R.S Murthy
+
+Computer science and engineering (CSE) Faculties : 
+Department of Computer Science & Data Science
+
+Name: Sri K. Krishna Kumar
+
+Designation: Assistant Professor in Computers, HOD
+
+Qualification: M.Sc. (IT)
+
+Area of Specialization: BIG DATA
+
+Email: kkrishna@gvpcdpgc.edu.in
+
+Date of Joining: 14-06-2000
+
+Name: Smt. Y.S. Vijaya Lakshmi
+
+Designation: Assistant Professor in Computers
+
+Qualification: M.Sc. (CS), M.Tech. (CS)
+
+Area of Specialization: MACHINE LEARNING
+
+Email: ysvijaya@gvpcdpgc.edu.in
+
+Date of Joining: 03-12-2012
+
+Name: Smt. M. Lakshmi Madhuri
+
+Designation: Assistant Professor in Computers
+
+Qualification: M.Sc. (CS), M.Tech. (CS)
+
+Area of Specialization: NETWORK SECURITY
+
+Email: lakshmimadhurim@gvpcdpgc.edu.in
+
+Date of Joining: 02-07-2018
+
+Name: Smt. N.J.L. Prasanna
+
+Designation: Assistant Professor in Computers
+
+Qualification: M.C.A., M.Tech. (CS)
+
+Area of Specialization: MACHINE LEARNING
+
+Email: njlprasanna@gvpcdpgc.edu.in
+
+Date of Joining: 23-12-2019
+
+Name: Smt. P. Lavanya
+
+Designation: Assistant Professor in Computers
+
+Qualification: M.C.A.
+
+Area of Specialization: NETWORK SECURITY
+
+Email: lavanya.p@gvpcdpgc.edu.in
+
+Date of Joining: 31-12-2022
+
+Name: Smt. J. Haritha
+
+Designation: Assistant Professor in Computers
+
+Qualification: M.Sc (CS), B.Ed.
+
+Area of Specialization: COMPUTER SCIENCE
+
+Email: haritha.j@gvpcdpgc.edu.in
+
+Date of Joining: 03-01-2023
+
+Name: Mr. K. Sankar Sastry
+
+Designation: Assistant Professor in Computers
+
+Qualification: MCA, M.Tech. (AI&R)
+
+Area of Specialization: ARTIFICIAL INTELLIGENCE & MACHINE LEARNING
+
+Email: k.sankarsastry@gvpcdpgc.edu.in
+
+Date of Joining: 04-09-2024
+
+Name: Ch. Lakshmi Laya
+
+Designation: Assistant Professor in Computers
+
+Qualification: MCA
+
+Area of Specialization: Data Structures & Programming Language
+
+Email: lakshmilaya@gvpcdpgc.edu.in
+
+Date of Joining: 23-09-2024
+
+Name: M. Jyothikiram
+
+Designation: Assistant Professor in Computers
+
+Qualification: MCA, M.Tech.
+
+Area of Specialization: Programming Language
+
+Email: jyothikiran.m@gvpcdpgc.edu.in
+
+Date of Joining: 18-10-2024
+
+Name: T Pavani
+
+Designation: Assistant Professor in Computers
+
+Qualification: M.Sc.
+
+Area of Specialization: Programming Language
+
+Email: pavani.t@gvpcdpgc.edu.in
+
+Date of Joining: 11-08-2025
+
+Name: Martin Velangini Vasantha
+
+Designation: Assistant Professor in Computers
+
+Qualification: MCA, M.Tech (CSE)
+
+Area of Specialization: Programming Language
+
+Email: vasantha.mv@gvpcdpgc.edu.in
+
+Date of Joining: 03-09-2025
+
+Name: K Yogesh Naidu
+
+Designation: Assistant Professor in Data Science
+
+Qualification: M.Sc. (Stat), APSET
+
+Area of Specialization: Programming Language
+
+Email: yogeshnaidu.k@gvpcdpgc.edu.in
+
+Date of Joining: 03-10-2025
+
+Name: Venkataramana
+
+Designation: Assistant Professor in Computers
+
+Qualification: M.Sc.
+
+Area of Specialization: Programming Language
+
+Email: venkataramana.s@gvpcdpgc.edu.in
+
+Date of Joining: 08-10-2025
